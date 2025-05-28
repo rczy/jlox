@@ -75,8 +75,9 @@ public class Scanner {
                 break;
             case '/':
                 if (match('/')) {
-                    // comment until end of line
-                    while (peek() != '\n' && !isAtEnd()) advance();
+                    lineComment();
+                } else if (match('*')) {
+                    blockComment();
                 } else {
                     addToken(SLASH);
                 }
@@ -169,6 +170,22 @@ public class Scanner {
         TokenType type = keywords.get(text);
         if (type == null) type = IDENTIFIER;
         addToken(type);
+    }
+
+    private void lineComment() {
+        while (peek() != '\n' && !isAtEnd()) advance();
+    }
+
+    private void blockComment() {
+        while (!isAtEnd()) {
+            if (peek() == '*' && peekNext() == '/') {
+                advance();
+                advance();
+                break;
+            }
+            if (peek() == '\n') line++;
+            advance();
+        }
     }
 
     private void addToken(TokenType type) {
