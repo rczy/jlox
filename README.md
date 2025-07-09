@@ -12,11 +12,11 @@ Since `jlox` is not complete yet, its features are divided into two categories:
 - **Syntax Trees:** Represents code in a traversable form.
 - **Parsing:** Converts tokens into Abstract Syntax Tree (AST) nodes, with error reporting.
 - **Evaluating expressions:** Computes the values of expressions, with runtime error detection.
-- **Executing statements:** Interpreting statements one after the other.
-- **Variables:** *Work in progress*
+- **Executing statements:** Interprets statements one after the other.
+- **Variables:** Manages lexically scoped variables.
+- **Control flow**: *Work in progress*
 
 ### Upcoming Features
-- **Control flow**
 - **Functions**
 - **Resolving and Binding**
 - **Classes**
