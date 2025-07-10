@@ -15,7 +15,7 @@ Since `jlox` is not complete yet, its features are divided into two categories:
 - **Executing statements:** Interprets statements one after the other.
 - **Variables:** Manages lexically scoped variables.
 - **Control flow**: Supports logical expressions, branching and loops.
-- **Functions**: *Work in progress*
+- **Functions**: Calls user-defined and native functions with closures.
 
 ### Upcoming Features
 - **Resolving and Binding**
