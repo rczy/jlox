@@ -93,7 +93,7 @@ public class Parser {
     }
 
     private Expr assignment() {
-        Expr expr = equality();
+        Expr expr = or();
 
         if (match(EQUAL)) {
             Token equals = previous();
@@ -107,6 +107,14 @@ public class Parser {
             error(equals, "Invalid assignment target.");
         }
         return expr;
+    }
+
+    private Expr or() {
+        return logicalExpr(this::and, OR);
+    }
+
+    private Expr and() {
+        return logicalExpr(this::equality, AND);
     }
 
     private Expr equality() {
@@ -162,6 +170,16 @@ public class Parser {
             Token operator = previous();
             Expr right = method.get();
             expr = new Expr.Binary(expr, operator, right);
+        }
+        return expr;
+    }
+
+    private Expr logicalExpr(Supplier<Expr> method, TokenType type) {
+        Expr expr = method.get();
+        while (match(type)) {
+            Token operator = previous();
+            Expr right = method.get();
+            expr = new Expr.Logical(expr, operator, right);
         }
         return expr;
     }
