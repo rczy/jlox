@@ -14,10 +14,10 @@ Since `jlox` is not complete yet, its features are divided into two categories:
 - **Evaluating expressions:** Computes the values of expressions, with runtime error detection.
 - **Executing statements:** Interprets statements one after the other.
 - **Variables:** Manages lexically scoped variables.
-- **Control flow**: *Work in progress*
+- **Control flow**: Supports logical expressions, branching and loops.
+- **Functions**: *Work in progress*
 
 ### Upcoming Features
-- **Functions**
 - **Resolving and Binding**
 - **Classes**
 - **Inheritance**
