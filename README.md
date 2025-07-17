@@ -16,10 +16,10 @@ Since `jlox` is not complete yet, its features are divided into two categories:
 - **Variables:** Manages lexically scoped variables.
 - **Control flow**: Supports logical expressions, branching and loops.
 - **Functions**: Calls user-defined and native functions with closures.
+- **Resolving and Binding**: Analyses the source code statically.
+- **Classes**: *Work in progress*
 
 ### Upcoming Features
-- **Resolving and Binding**
-- **Classes**
 - **Inheritance**
 
 ## How to Build
