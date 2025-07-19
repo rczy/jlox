@@ -17,10 +17,11 @@ Since `jlox` is not complete yet, its features are divided into two categories:
 - **Control flow**: Supports logical expressions, branching and loops.
 - **Functions**: Calls user-defined and native functions with closures.
 - **Resolving and Binding**: Analyses the source code statically.
-- **Classes**: *Work in progress*
+- **Classes**: Handles objects and classes with constructors, fields, and methods.
+- **Inheritance**: *Work in progress*
 
 ### Upcoming Features
-- **Inheritance**
+- *Actualize the 'Features' section after inheritance is supported*
 
 ## How to Build
 Compiling the source files with `javac` is straightforward:
