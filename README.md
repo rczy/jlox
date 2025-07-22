@@ -2,26 +2,22 @@
 
 This repository contains a Lox programming language interpreter implemented in Java. Lox is a small, dynamically-typed language designed for teaching purposes.
 
-The interpreter is being built following the awesome book titled [Crafting Interpreters](https://craftinginterpreters.com/) by Robert Nystrom.
+The interpreter was built following the awesome book titled [Crafting Interpreters](https://craftinginterpreters.com/) by Robert Nystrom.
 
 ## Features
-Since `jlox` is not complete yet, its features are divided into two categories:
+`jlox` is a tree-walk interpreter providing the following features:
 
-### Current State
 - **Scanning:** Splits the raw source code into tokens.
 - **Syntax Trees:** Represents code in a traversable form.
 - **Parsing:** Converts tokens into Abstract Syntax Tree (AST) nodes, with error reporting.
 - **Evaluating expressions:** Computes the values of expressions, with runtime error detection.
 - **Executing statements:** Interprets statements one after the other.
 - **Variables:** Manages lexically scoped variables.
-- **Control flow**: Supports logical expressions, branching and loops.
+- **Control flow**: Supports logical expressions, branching, and loops.
 - **Functions**: Calls user-defined and native functions with closures.
 - **Resolving and Binding**: Analyses the source code statically.
 - **Classes**: Handles objects and classes with constructors, fields, and methods.
-- **Inheritance**: *Work in progress*
-
-### Upcoming Features
-- *Actualize the 'Features' section after inheritance is supported*
+- **Inheritance**: Allows superclass-subclass relations.
 
 ## How to Build
 Compiling the source files with `javac` is straightforward:
